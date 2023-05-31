@@ -1,82 +1,44 @@
 import './Home.scss';
+
+import {Link} from 'react-router-dom'
+
 const Home = () => {
   return (
     <>
       <main>
         <header>
-          <nav>
-            <div class="container">
-              <div class="left">
-                <ul class="menu">
-                  <li>
-                    <input type="radio" id="menu-css" name="menu-item" />
-                    <label for="menu-css">CSS</label>
-                    <ul class="collapsed-menu">
-                      <li>Color</li>
-                      <li>Grid</li>
-                      <li>Helpers</li>
-                      <li>Media</li>
-                      <li>Pulse</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <input type="radio" id="menu-component" name="menu-item" />
-                    <label for="menu-component">Component</label>
-                    <ul class="collapsed-menu">
-                      <li>Badges</li>
-                      <li>Buttons</li>
-                      <li>Breadcumbs</li>
-                      <li>Cards</li>
-                      <li>Chips</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <input type="radio" id="menu-js" name="menu-item" />
-                    <label for="menu-js">Javascript</label>
-                    <ul class="collapsed-menu">
-                      <li>Carausel</li>
-                      <li>Collapsible</li>
-                      <li>Dialogs</li>
-                      <li>Dropdown</li>
-                      <li>Parallax</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <input type="radio" id="menu-mobile" name="menu-item" />
-                    <label for="menu-mobile">Mobile</label>
-                    <ul class="collapsed-menu">
-                      <li>Navbar</li>
-                      <li>Toast</li>
-                      <li>Media</li>
-                      <li>Tabs</li>
-                      <li>Hamburger</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <input type="radio" id="menu-showcase" name="menu-item" />
-                    <label for="menu-showcase">Showcase</label>
-                    <ul class="collapsed-menu">
-                      <li>Gold</li>
-                      <li>Silver</li>
-                      <li>Trophies</li>
-                      <li>Medals</li>
-                      <li>Bronze</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div class="right">
-                <div class="menu-toggle">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-                <div class="text-container"></div>
-              </div>
-            </div>
-          </nav>
+          <div class="container">
+            <nav>
+              <ul class="menu">
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/">Search</Link>
+                </li>
+                <li>
+                  <Link to="/">Explore</Link>
+                </li>
+                <li>
+                  <Link to="/">Reels</Link>
+                </li>
+                <li>
+                  <Link to="/">Messages</Link>
+                </li>
+                <li>
+                  <Link to="/">Notifications</Link>
+                </li>
+                <li>
+                  <Link to="/">Create</Link>
+                </li>
+                <li>
+                  <Link to="/">Profile</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </header>
-        <section class="container">
+        <section class="right">
           <div class="col-9">
             <div class="statuses">
               <div class="status">
