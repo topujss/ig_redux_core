@@ -1,88 +1,59 @@
 import './Home.scss';
+import Header from '../../components/Header/Header';
 
-import {Link} from 'react-router-dom'
+import Profile from '../../assets/images/profile.jpg';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
     <>
       <main>
-        <header>
-          <div class="container">
-            <nav>
-              <ul class="menu">
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/">Search</Link>
-                </li>
-                <li>
-                  <Link to="/">Explore</Link>
-                </li>
-                <li>
-                  <Link to="/">Reels</Link>
-                </li>
-                <li>
-                  <Link to="/">Messages</Link>
-                </li>
-                <li>
-                  <Link to="/">Notifications</Link>
-                </li>
-                <li>
-                  <Link to="/">Create</Link>
-                </li>
-                <li>
-                  <Link to="/">Profile</Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
-        <section class="right">
-          <div class="col-9">
-            <div class="statuses">
-              <div class="status">
-                <div class="image">
+        <Header />
+        <section className="right">
+          <div className="col-9">
+            <div className="statuses">
+              <div className="status">
+                <div className="image">
                   <img
                     src="https://media.geeksforgeeks.org/wp-content/uploads/20220604085434/GeeksForGeeks-300x243.png"
                     alt="img3"
                   />
                 </div>
               </div>
-              <div class="status">
-                <div class="image">
+              <div className="status">
+                <div className="image">
                   <img
                     src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg"
                     alt="img4"
                   />
                 </div>
               </div>
-              <div class="status">
-                <div class="image">
+              <div className="status">
+                <div className="image">
                   <img
                     src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093241/g3-200x200.png"
                     alt="img5"
                   />
                 </div>
               </div>
-              <div class="status">
-                <div class="image">
+              <div className="status">
+                <div className="image">
                   <img
                     src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093229/g-200x200.png"
                     alt="img6"
                   />
                 </div>
               </div>
-              <div class="status">
-                <div class="image">
+              <div className="status">
+                <div className="image">
                   <img
                     src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg"
                     alt="img7"
                   />
                 </div>
               </div>
-              <div class="status">
-                <div class="image">
+              <div className="status">
+                <div className="image">
                   <img
                     src="https://media.geeksforgeeks.org/wp-content/uploads/20220604085434/GeeksForGeeks-300x243.png"
                     alt="img8"
@@ -91,16 +62,13 @@ const Home = () => {
               </div>
             </div>
 
-            <div class="card">
-              <div class="top">
-                <div class="userDetails">
-                  <div class="profilepic">
-                    <div class="profile_img">
-                      <div class="image">
-                        <img
-                          src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093229/g-200x200.png"
-                          alt="img8"
-                        />
+            <div className="card">
+              <div className="top">
+                <div className="userDetails">
+                  <div className="profilepic">
+                    <div className="profile_img">
+                      <div className="image">
+                        <img src={Profile} alt="img8" />
                       </div>
                     </div>
                   </div>
@@ -111,22 +79,22 @@ const Home = () => {
                   </h3>
                 </div>
                 <div>
-                  <span class="dot">
-                    <i class="fas fa-ellipsis-h"></i>
+                  <span className="dot">
+                    <i className="fas fa-ellipsis-h"></i>
                   </span>
                 </div>
               </div>
-              <div class="imgBx">
+              <div className="imgBx">
                 <img
                   src="https://media.geeksforgeeks.org/wp-content/uploads/20220609090112/gfg1-298x300.jpeg"
                   alt="post-/1"
-                  class="cover"
+                  className="cover"
                 />
               </div>
-              <div class="bottom">
-                <div class="actionBtns">
-                  <div class="left">
-                    <span class="heart" onclick="addlike()">
+              <div className="bottom">
+                <div className="actionBtns">
+                  <div className="left">
+                    <span className="heart" onclick="addlike()">
                       <span>
                         <svg
                           aria-label="Like"
@@ -156,7 +124,7 @@ const Home = () => {
                     </span>
                     <svg
                       aria-label="Comment"
-                      class="_8-yf5 "
+                      className="_8-yf5 "
                       color="#262626"
                       fill="#262626"
                       height="24"
@@ -178,7 +146,7 @@ const Home = () => {
                     </svg>
                     <svg
                       aria-label="Share Post"
-                      class="_8-yf5 "
+                      className="_8-yf5 "
                       color="#262626"
                       fill="#262626"
                       height="24"
@@ -196,10 +164,10 @@ const Home = () => {
                       ></path>
                     </svg>
                   </div>
-                  <div class="right">
+                  <div className="right">
                     <svg
                       aria-label="Save"
-                      class="_8-yf5 "
+                      className="_8-yf5 "
                       color="#262626"
                       fill="#262626"
                       height="24"
@@ -219,36 +187,36 @@ const Home = () => {
                   </div>
                 </div>
                 <a href="#">
-                  <p class="likes">203 likes</p>
+                  <p className="likes">203 likes</p>
                 </a>
                 <a href="#">
-                  <p class="message">
+                  <p className="message">
                     <b>Raju Modi</b>
                   </p>
                 </a>
                 <a href="#">
-                  <h4 class="comments">View all 32 comments</h4>
+                  <h4 className="comments">View all 32 comments</h4>
                 </a>
                 <a href="#">
-                  <h5 class="postTime">2 hours ago</h5>
+                  <h5 className="postTime">2 hours ago</h5>
                 </a>
-                <div class="addComments">
-                  <div class="reaction">
+                <div className="addComments">
+                  <div className="reaction">
                     <h3>
-                      <i class="far fa-smile"></i>
+                      <i className="far fa-smile"></i>
                     </h3>
                   </div>
-                  <input type="text" class="text" placeholder="Add a comment..." />
+                  <input type="text" className="text" placeholder="Add a comment..." />
                   <a href="#">Post</a>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="top">
-                <div class="userDetails">
-                  <div class="profilepic">
-                    <div class="profile_img">
-                      <div class="image">
+            <div className="card">
+              <div className="top">
+                <div className="userDetails">
+                  <div className="profilepic">
+                    <div className="profile_img">
+                      <div className="image">
                         <img
                           src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093241/g3-200x200.png"
                           alt="img9"
@@ -263,22 +231,22 @@ const Home = () => {
                   </h3>
                 </div>
                 <div>
-                  <span class="dot">
-                    <i class="fas fa-ellipsis-h"></i>
+                  <span className="dot">
+                    <i className="fas fa-ellipsis-h"></i>
                   </span>
                 </div>
               </div>
-              <div class="imgBx">
+              <div className="imgBx">
                 <img
                   src="https://media.geeksforgeeks.org/wp-content/uploads/20220609090119/gfg2-300x297.jpeg"
                   alt="post-/1"
-                  class="cover"
+                  className="cover"
                 />
               </div>
-              <div class="bottom">
-                <div class="actionBtns">
-                  <div class="left">
-                    <span class="heart" onclick="addlike()">
+              <div className="bottom">
+                <div className="actionBtns">
+                  <div className="left">
+                    <span className="heart" onclick="addlike()">
                       <span>
                         <svg
                           aria-label="Like"
@@ -309,7 +277,7 @@ const Home = () => {
                     </span>
                     <svg
                       aria-label="Comment"
-                      class="_8-yf5 "
+                      className="_8-yf5 "
                       color="#262626"
                       fill="#262626"
                       height="24"
@@ -331,7 +299,7 @@ const Home = () => {
                     </svg>
                     <svg
                       aria-label="Share Post"
-                      class="_8-yf5 "
+                      className="_8-yf5 "
                       color="#262626"
                       fill="#262626"
                       height="24"
@@ -348,10 +316,10 @@ const Home = () => {
                       ></path>
                     </svg>
                   </div>
-                  <div class="right">
+                  <div className="right">
                     <svg
                       aria-label="Save"
-                      class="_8-yf5 "
+                      className="_8-yf5 "
                       color="#262626"
                       fill="#262626"
                       height="24"
@@ -371,36 +339,36 @@ const Home = () => {
                 </div>
 
                 <a href="#">
-                  <p class="likes">119 likes</p>
+                  <p className="likes">119 likes</p>
                 </a>
                 <a href="#">
-                  <p class="message">
+                  <p className="message">
                     <b>Piyush Agarwal</b>
                   </p>
                 </a>
                 <a href="#">
-                  <h4 class="comments">View all 20 comments</h4>
+                  <h4 className="comments">View all 20 comments</h4>
                 </a>
                 <a href="#">
-                  <h5 class="postTime">4 hours ago</h5>
+                  <h5 className="postTime">4 hours ago</h5>
                 </a>
-                <div class="addComments">
-                  <div class="reaction">
+                <div className="addComments">
+                  <div className="reaction">
                     <h3>
-                      <i class="far fa-smile"></i>
+                      <i className="far fa-smile"></i>
                     </h3>
                   </div>
-                  <input type="text" class="text" placeholder="Add a comment..." />
+                  <input type="text" className="text" placeholder="Add a comment..." />
                   <a href="#">Post</a>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="top">
-                <div class="userDetails">
-                  <div class="profilepic">
-                    <div class="profile_img">
-                      <div class="image">
+            <div className="card">
+              <div className="top">
+                <div className="userDetails">
+                  <div className="profilepic">
+                    <div className="profile_img">
+                      <div className="image">
                         <img src="./assets/images/user-3.jpeg" alt="img10/" />
                       </div>
                     </div>
@@ -412,22 +380,22 @@ const Home = () => {
                   </h3>
                 </div>
                 <div>
-                  <span class="dot">
-                    <i class="fas fa-ellipsis-h"></i>
+                  <span className="dot">
+                    <i className="fas fa-ellipsis-h"></i>
                   </span>
                 </div>
               </div>
-              <div class="imgBx">
+              <div className="imgBx">
                 <img
                   src="https://media.geeksforgeeks.org/wp-content/uploads/20220609090130/gfg3-299x300.jpeg"
                   alt="post-/1"
-                  class="cover"
+                  className="cover"
                 />
               </div>
-              <div class="bottom">
-                <div class="actionBtns">
-                  <div class="left">
-                    <span class="heart" onclick="addlike()">
+              <div className="bottom">
+                <div className="actionBtns">
+                  <div className="left">
+                    <span className="heart" onclick="addlike()">
                       <span>
                         <svg
                           aria-label="Like"
@@ -457,7 +425,7 @@ const Home = () => {
                     </span>
                     <svg
                       aria-label="Comment"
-                      class="_8-yf5 "
+                      className="_8-yf5 "
                       color="#262626"
                       fill="#262626"
                       height="24"
@@ -479,7 +447,7 @@ const Home = () => {
                     </svg>
                     <svg
                       aria-label="Share Post"
-                      class="_8-yf5 "
+                      className="_8-yf5 "
                       color="#262626"
                       fill="#262626"
                       height="24"
@@ -497,10 +465,10 @@ const Home = () => {
                       ></path>
                     </svg>
                   </div>
-                  <div class="right">
+                  <div className="right">
                     <svg
                       aria-label="Save"
-                      class="_8-yf5 "
+                      className="_8-yf5 "
                       color="#262626"
                       fill="#262626"
                       height="24"
@@ -520,41 +488,56 @@ const Home = () => {
                   </div>
                 </div>
                 <a href="#">
-                  <p class="likes">184 likes</p>
+                  <p className="likes">184 likes</p>
                 </a>
                 <a href="#">
-                  <p class="message">
+                  <p className="message">
                     <b>Mayank</b> Nature
                     <span>#love</span>
                     <span>#2021</span>
                   </p>
                 </a>
                 <a href="#">
-                  <h4 class="comments">View all 25 comments</h4>
+                  <h4 className="comments">View all 25 comments</h4>
                 </a>
                 <a href="#">
-                  <h5 class="postTime">9 hours ago</h5>
+                  <h5 className="postTime">9 hours ago</h5>
                 </a>
-                <div class="addComments">
-                  <div class="reaction">
+                <div className="addComments">
+                  <div className="reaction">
                     <h3>
-                      <i class="far fa-smile"></i>
+                      <i className="far fa-smile"></i>
                     </h3>
                   </div>
-                  <input type="text" class="text" placeholder="Add a comment..." />
+                  <input type="text" className="text" placeholder="Add a comment..." />
                   <a href="#">Post</a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-3">
-            <div class="card">
+          <div className="col-3">
+            <div className="top my_profile">
+              <div className="userDetails">
+                <img src={Profile} alt="img12/" />
+                <h3>
+                  topujss
+                  <br />
+                  <span>Toquir ahmed</span>
+                </h3>
+              </div>
+              <div>
+                <a href="#" className="follow">
+                  Switch
+                </a>
+              </div>
+            </div>
+            <div className="card">
               <h4>Suggestions For You</h4>
-              <div class="top">
-                <div class="userDetails">
-                  <div class="profilepic">
-                    <div class="profile_img">
-                      <div class="image">
+              <div className="top">
+                <div className="userDetails">
+                  <div className="profilepic">
+                    <div className="profile_img">
+                      <div className="image">
                         <img
                           src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg"
                           alt="img12/"
@@ -569,16 +552,16 @@ const Home = () => {
                   </h3>
                 </div>
                 <div>
-                  <a href="#" class="follow">
+                  <a href="#" className="follow">
                     follow
                   </a>
                 </div>
               </div>
-              <div class="top">
-                <div class="userDetails">
-                  <div class="profilepic">
-                    <div class="profile_img">
-                      <div class="image">
+              <div className="top">
+                <div className="userDetails">
+                  <div className="profilepic">
+                    <div className="profile_img">
+                      <div className="image">
                         <img
                           src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093229/g-200x200.png"
                           alt="img13/"
@@ -593,16 +576,16 @@ const Home = () => {
                   </h3>
                 </div>
                 <div>
-                  <a href="#" class="follow">
+                  <a href="#" className="follow">
                     follow
                   </a>
                 </div>
               </div>
-              <div class="top">
-                <div class="userDetails">
-                  <div class="profilepic">
-                    <div class="profile_img">
-                      <div class="image">
+              <div className="top">
+                <div className="userDetails">
+                  <div className="profilepic">
+                    <div className="profile_img">
+                      <div className="image">
                         <img
                           src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093221/g2-200x200.jpg"
                           alt="img14/"
@@ -617,16 +600,16 @@ const Home = () => {
                   </h3>
                 </div>
                 <div>
-                  <a href="#" class="follow">
+                  <a href="#" className="follow">
                     follow
                   </a>
                 </div>
               </div>
-              <div class="top">
-                <div class="userDetails">
-                  <div class="profilepic">
-                    <div class="profile_img">
-                      <div class="image">
+              <div className="top">
+                <div className="userDetails">
+                  <div className="profilepic">
+                    <div className="profile_img">
+                      <div className="image">
                         <img
                           src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093229/g-200x200.png"
                           alt="img15/"
@@ -641,20 +624,20 @@ const Home = () => {
                   </h3>
                 </div>
                 <div>
-                  <a href="#" class="follow">
+                  <a href="#" className="follow">
                     follow
                   </a>
                 </div>
               </div>
-              <div class="top">
-                <div class="userDetails">
-                  <div class="profilepic">
-                    <div class="profile_img">
-                      <div class="image">
+              <div className="top">
+                <div className="userDetails">
+                  <div className="profilepic">
+                    <div className="profile_img">
+                      <div className="image">
                         <img
                           src="https://media.geeksforgeeks.org/wp-content/uploads/20220609093241/g3-200x200.png"
                           alt="img16/"
-                          class="cover"
+                          className="cover"
                         />
                       </div>
                     </div>
@@ -666,47 +649,47 @@ const Home = () => {
                   </h3>
                 </div>
                 <div>
-                  <a href="#" class="follow">
+                  <a href="#" className="follow">
                     follow
                   </a>
                 </div>
               </div>
             </div>
 
-            <div class="footer">
-              <a class="footer-section" href="#">
-                About
-              </a>
-              <a class="footer-section" href="#">
-                Help
-              </a>
-              <a class="footer-section" href="#">
+            <div className="footer">
+              <Link className="footer-section" to="/login">
+                Login
+              </Link>
+              <Link className="footer-section" to="/signup">
+                Signup
+              </Link>
+              <a className="footer-section" href="#">
                 API
               </a>
-              <a class="footer-section" href="#">
+              <a className="footer-section" href="#">
                 Jobs
               </a>
-              <a class="footer-section" href="#">
+              <a className="footer-section" href="#">
                 Privacy
               </a>
-              <a class="footer-section" href="#">
+              <a className="footer-section" href="#">
                 Terms
               </a>
-              <a class="footer-section" href="#">
+              <a className="footer-section" href="#">
                 Locations
               </a>
               <br />
-              <a class="footer-section" href="#">
+              <a className="footer-section" href="#">
                 Top Accounts
               </a>
-              <a class="footer-section" href="#">
+              <a className="footer-section" href="#">
                 Hashtag
               </a>
-              <a class="footer-section" href="#">
+              <a className="footer-section" href="#">
                 Language
               </a>
               <br />
-              <span class="footer-section">© 2023 INSTAGRAM FROM FACEBOOK</span>
+              <span className="footer-section">© 2023 INSTAGRAM FROM FACEBOOK</span>
             </div>
           </div>
         </section>

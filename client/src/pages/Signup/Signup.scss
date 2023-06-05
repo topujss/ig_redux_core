@@ -26,22 +26,78 @@ main {
   header {
     text-align: center;
     p,
-    button {
+    a {
       margin-bottom: 15px;
     }
     .logo {
       background-image: url(https://static.cdninstagram.com/rsrc.php/v3/yx/r/WtxJZZ3-9ZP.png);
-      background-size: 176px 186px;
+      background-size: 165px 177px;
       height: 50px;
       background-repeat: no-repeat;
       margin: 1rem 0;
-      // display: block;
+      margin-left: 5rem;
     }
     .border_line {
       display: flex;
       flex-direction: row;
       align-items: center;
       color: #8e8e8e;
+    }
+    & > p {
+      font-weight: 500;
+      color: #8e8e8e;
+      font-size: 1rem;
+    }
+
+    & > a {
+      width: inherit;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #0095f6;
+      color: #ffffff;
+      i {
+        font-size: 1.8rem;
+        position: relative;
+        top: 5px;
+      }
+    }
+
+    .border_line {
+      margin: 2rem 0;
+      p {
+        padding: 0 1rem;
+        position: relative;
+        top: 5px;
+      }
+
+      hr {
+        width: 200px;
+      }
+    }
+  }
+  .container {
+    form {
+      .condition_wrap {
+        .condition {
+          display: block;
+          color: #8e8e8e;
+          text-align: center;
+          font-size: 0.1rem;
+          font-weight: 400;
+          margin-bottom: 0.8rem;
+          a {
+            text-decoration: none;
+            display: inline;
+          }
+        }
+      }
+      .sign_btn > a {
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #0095f6 !important;
+        color: #ffffff;
+      }
     }
   }
 }
@@ -50,55 +106,51 @@ main {
 .login_logo {
   img {
     width: 75%;
-    margin: 0.7rem 0;
+    margin: 0.7rem auto;
   }
 }
 
-.container {
-  .border_line {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    color: #8e8e8e;
-    p {
-      padding: 0 1rem;
-      position: relative;
-      top: 0;
+.page {
+  .container {
+    padding: 0;
+    .border_line {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      color: #8e8e8e;
+      margin: 2rem 0;
+      p {
+        padding: 0 1rem;
+        position: relative;
+        top: 0;
+      }
+      hr {
+        width: 200px;
+      }
     }
-    hr {
-      width: 200px;
+    form {
+      a {
+        text-decoration: none;
+        font-size: 0.8rem;
+        text-align: center;
+        display: block;
+        i {
+          font-size: 2.8rem;
+          position: relative;
+          top: 9px;
+        }
+      }
+      .login_btn {
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #0095f6 !important;
+        color: #ffffff;
+      }
     }
-  }
-  form a {
-    i {
-      font-size: 1.2rem;
-      position: relative;
-      top: 5px;
-    }
-    text-decoration: none;
-    font-size: 0.8rem;
-    text-align: center;
-    display: block;
-    margin: 0.5rem 0;
   }
 }
 
 // login end
-
-.condition_wrap {
-  .condition {
-    display: block;
-    color: #8e8e8e;
-    text-align: center;
-    font-size: 0.1rem;
-    font-weight: 400;
-    margin-bottom: 0.8rem;
-    a {
-      text-decoration: none;
-      display: inline;
-    }
-  }
-}
 
 input {
   border: 1px solid #dbdbdb;
@@ -108,31 +160,6 @@ input {
   &:focus {
     outline: none;
   }
-}
-
-.page .header > p {
-  font-weight: 500;
-  color: #8e8e8e;
-  font-size: 1rem;
-}
-
-.page .header > button {
-  width: inherit;
-  padding: 10px 20px;
-  border-radius: 5px;
-  border: none;
-  background-color: #0095f6;
-  color: #ffffff;
-}
-
-.page .header div p {
-  padding: 0 1rem;
-  position: relative;
-  top: 5px;
-}
-
-.page .header div hr {
-  width: 200px;
 }
 
 /* container style*/
@@ -202,6 +229,7 @@ input {
     gap: 0.5rem;
     & > a img {
       border: none;
+      border-radius: 8px;
       color: white;
       height: 40px;
     }

@@ -10,7 +10,9 @@ const Login = () => {
         <div className="page">
           <header className="header">
             <div className="login_logo">
-              <img src="https://logos-download.com/wp-content/uploads/2016/03/Instagram_Logo_2016.png" alt="" />
+              <Link href="/">
+                <img src="https://logos-download.com/wp-content/uploads/2016/03/Instagram_Logo_2016.png" alt="" />
+              </Link>
             </div>
           </header>
           <div className="container">
@@ -18,25 +20,25 @@ const Login = () => {
               <input type="text" placeholder="Mobile Number or Email" />
               <input type="password" placeholder="Password" />
 
-              <button>Login</button>
+              <Link className="login_btn" to="/login">Login</Link>
               <div className="border_line">
                 <hr />
                 <p>OR</p>
                 <hr />
               </div>
-              <a href="/">
+              <Link to="/">
                 {' '}
                 <i>
                   <AiFillFacebook />
                 </i>{' '}
                 Log in with Facebook
-              </a>
+              </Link>
             </form>
           </div>
         </div>
         <div className="option">
           <p>
-            Have an account? <Link to="/signup">Log in</Link>
+            Have an account? <Link to="/signup">Sign Up</Link>
           </p>
         </div>
         <div className="otherapps">

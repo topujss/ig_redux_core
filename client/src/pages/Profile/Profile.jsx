@@ -4,11 +4,13 @@ import { FaCog } from 'react-icons/fa';
 import { MdOutlineGridOn } from 'react-icons/md';
 import { BsCameraReels, BsPersonBoundingBox, BsSave } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
+import Header from '../../components/Header/Header';
 
 const Profile = () => {
   return (
     <>
       <header>
+        <Header />
         <div className="container">
           <div className="profile">
             <div className="profile-image">

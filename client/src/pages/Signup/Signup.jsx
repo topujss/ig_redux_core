@@ -11,13 +11,13 @@ const Signup = () => {
           <header className="header">
             <div className="logo"></div>
             <p>Sign up to see photos and videos from your friends.</p>
-            <button>
+            <Link to="/">
               {' '}
               <i>
                 <AiFillFacebook />
               </i>{' '}
               Log in with Facebook
-            </button>
+            </Link>
             <div className="border_line">
               <hr />
               <p>OR</p>
@@ -41,7 +41,9 @@ const Signup = () => {
                   <a href="/">Cookies Policy</a>.
                 </p>
               </div>
-              <button>Sign up</button>
+              <div className="sign_btn">
+                <Link to="/login">Sign up</Link>
+              </div>
             </form>
           </div>
         </div>
