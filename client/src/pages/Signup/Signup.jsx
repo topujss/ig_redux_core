@@ -2,8 +2,35 @@ import { Link } from 'react-router-dom';
 import './Signup.scss';
 
 import { AiFillFacebook } from 'react-icons/ai';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { userRegister } from '../../redux/auth/actions';
 
 const Signup = () => {
+  const dispatch = useDispatch();
+
+  const [input, setInput] = useState({
+    name: '',
+    username: '',
+    email: '',
+    password: '',
+  });
+
+  const handleInputChange = (e) => {
+    setInput((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  // submitting data
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // send a request to signup
+    dispatch(userRegister({ input, setInput }));
+  };
+
   return (
     <>
       <main>
@@ -25,11 +52,35 @@ const Signup = () => {
             </div>
           </header>
           <div className="container">
-            <form action="">
-              <input type="text" placeholder="Mobile Number or Email" />
-              <input type="text" placeholder="Full Name" />
-              <input type="text" placeholder="Username" />
-              <input type="password" placeholder="Password" />
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Username"
+                value={input.username}
+                name="username"
+                onChange={handleInputChange}
+              />
+              <input
+                type="text"
+                placeholder="Full Name"
+                value={input.name}
+                name="name"
+                onChange={handleInputChange}
+              />
+              <input
+                type="text"
+                placeholder="Mobile Number or Email"
+                value={input.email}
+                name="email"
+                onChange={handleInputChange}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                value={input.password}
+                name="password"
+                onChange={handleInputChange}
+              />
 
               <div className="condition_wrap">
                 <p className="condition">
@@ -42,7 +93,7 @@ const Signup = () => {
                 </p>
               </div>
               <div className="sign_btn">
-                <Link to="/login">Sign up</Link>
+                <button>Sign up</button>
               </div>
             </form>
           </div>

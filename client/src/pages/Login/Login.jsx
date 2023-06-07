@@ -2,8 +2,26 @@ import { Link } from 'react-router-dom';
 import '../Signup/Signup.scss';
 
 import { AiFillFacebook } from 'react-icons/ai';
+import { useState } from 'react';
 
 const Login = () => {
+  const [input, setInput] = useState({
+    email: '',
+    password: '',
+  });
+
+  // when change inputs
+  const handleInputChange = (e) => {
+    setInput((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <main>
@@ -16,11 +34,25 @@ const Login = () => {
             </div>
           </header>
           <div className="container">
-            <form action="">
-              <input type="text" placeholder="Mobile Number or Email" />
-              <input type="password" placeholder="Password" />
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Mobile Number or Email"
+                value={input.email}
+                name="email"
+                onChange={handleInputChange}
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                value={input.password}
+                name="password"
+                onChange={handleInputChange}
+              />
 
-              <Link className="login_btn" to="/login">Login</Link>
+              <Link className="login_btn" to="/">
+                Login
+              </Link>
               <div className="border_line">
                 <hr />
                 <p>OR</p>

@@ -1,0 +1,3 @@
+export const USER_REG_PANDING = 'USER_REG_PANDING';
+export const USER_REG_SUCCESS = 'USER_REG_SUCCESS';
+export const USER_REG_FAILED = 'USER_REG_FAILED';
