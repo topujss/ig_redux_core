@@ -3,6 +3,7 @@ import '../Signup/Signup.scss';
 
 import { AiFillFacebook } from 'react-icons/ai';
 import { useState } from 'react';
+import axios from 'axios';
 
 const Login = () => {
   const [input, setInput] = useState({
@@ -20,6 +21,19 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    axios
+      .post(`http://localhost:5050/api/v1/auth/login`, input)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.error(err.message || err);
+      });
+    setInput({
+      email: '',
+      password: '',
+    });
   };
 
   return (
@@ -50,9 +64,7 @@ const Login = () => {
                 onChange={handleInputChange}
               />
 
-              <Link className="login_btn" to="/">
-                Login
-              </Link>
+              <button className="login_btn">Login</button>
               <div className="border_line">
                 <hr />
                 <p>OR</p>
