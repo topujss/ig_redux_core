@@ -72,7 +72,7 @@ const userLogin = asyncHandler(async (req, res) => {
   //   }
   // );
 
-  //---- save refresh token to cookie ----
+  //---- save refresh token to cookie -------
   res
     .cookie('access_token', accessToken, {
       httpOnly: true,

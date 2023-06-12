@@ -1,11 +1,15 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import '../Signup/Signup.scss';
 
 import { AiFillFacebook } from 'react-icons/ai';
 import { useState } from 'react';
-import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { userLogin } from '../../redux/auth/actions';
 
 const Login = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const [input, setInput] = useState({
     email: '',
     password: '',
@@ -21,19 +25,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    axios
-      .post(`http://localhost:5050/api/v1/auth/login`, input)
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.error(err.message || err);
-      });
-    setInput({
-      email: '',
-      password: '',
-    });
+    dispatch(userLogin({ input, setInput, navigate }));
   };
 
   return (
@@ -120,7 +112,7 @@ const Login = () => {
               <a href="">PRIVACY</a>
             </li>
             <li>
-              <a href="">TEMS</a>
+              <a href="">TERMS</a>
             </li>
             <li>
               <a href="">LOCATIONS</a>

@@ -3,10 +3,21 @@ import SingleProfile from '../../components/SingleProfile/SingleProfile';
 import { FaCog } from 'react-icons/fa';
 import { MdOutlineGridOn } from 'react-icons/md';
 import { BsCameraReels, BsPersonBoundingBox, BsSave } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../components/Header/Header';
+import { useDispatch, useSelector } from 'react-redux';
+import { userLogout } from '../../redux/auth/actions';
 
 const Profile = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const { user } = useSelector((s) => s.authStore);
+
+  const handleUserLogout = () => {
+    dispatch(userLogout({ navigate }));
+  };
+
   return (
     <>
       <header>
@@ -21,12 +32,15 @@ const Profile = () => {
             </div>
 
             <div className="profile-user-settings">
-              <h1 className="profile-user-name">janedoe_</h1>
+              <h1 className="profile-user-name">{user?.name}</h1>
               <button className="btn profile-edit-btn">Edit Profile</button>
               <button className="btn profile-settings-btn" title="profile settings">
                 <i aria-hidden="true">
                   <FaCog />
                 </i>
+              </button>
+              <button onClick={handleUserLogout} className="btn profile-edit-btn">
+                Logout
               </button>
             </div>
 

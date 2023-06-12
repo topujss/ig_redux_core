@@ -3,8 +3,10 @@ import Header from '../../components/Header/Header';
 
 import Profile from '../../assets/images/profile.jpg';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
+  const { user } = useSelector((s) => s.authStore);
   return (
     <>
       <main>
@@ -520,9 +522,9 @@ const Home = () => {
               <div className="userDetails">
                 <img src={Profile} alt="img12/" />
                 <h3>
-                  topujss
+                  {user?.email}
                   <br />
-                  <span>Toquir ahmed</span>
+                  <span>{user?.name}</span>
                 </h3>
               </div>
               <div>
